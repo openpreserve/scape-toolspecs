@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tool xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:schemaLocation="https://raw.github.com/openplanets/scape/master/scape-core/src/main/resources/eu/scape_project/core/model/toolspec/toolspec.xsd" 
+      xmlns="http://scape-project.eu/tool" 
+      xmlns:xlink="http://www.w3.org/1999/xlink" 
+      schemaVersion="1.0" 
+      name="PageLyzer" 
+      version="0.9-12" 
+      homepage="http://wiki.opf-labs.org/display/TR/Pagelyzer">
+  <installation>
+    <dependency operatingSystemName="Debian">pagelyzer-ruby1.9.1</dependency>
+    <license type="LGPLv3">GNU Lesser General Public License, Version 3.0</license>
+  </installation>
+  <otherProperties>
+    <property name="cost">0</property>
+  </otherProperties>
+  <operations>
+    <operation name="digital-preservation-webarchiving-pagelyzer-changedetection">
+      <!--
+      <description>A tool for detecting changes in web pages and their rendering</description>
+      -->
+      <description>Tool for detecting changes in web pages and their rendering</description>
+      <command>/usr/bin/pagelyzer_changedetection --url1=${input_url1} --url2=${input_url2} --doc=${param_doc} --output-folder=${param_outputfolder} --browser=${param_browser} --browser1=${param_browser1} --browser2=${param_browser1} --type=${param_type}</command>
+      <inputs>
+        <input name="input_url1" required="true">
+          <description>URL of first webpage. The URL must include the "http://" schema</description>
+        </input>
+        <input name="input_url2" required="true">
+          <description>URL of second webpage. The URL must include the "http://" schema</description>
+        </input>
+        <parameter name="param_doc" required="false">
+          <description>Degree of Coherence (in [1..10]). Default = 6</description>
+        </parameter>
+        <parameter name="param_outputfolder" required="false">
+          <description>Output folder. Where the webpage snapshots, HTMLs, etc are stored. Default ~/pagelyzer/</description>
+        </parameter>
+        <parameter name="param_browser" required="false">
+          <description>Browser instance used for both input webpages. Possible values are: firefox, chrome, iexploreproxy, safariproxy, opera. Default = firefox</description>
+        </parameter>
+        <parameter name="param_browser1" required="false">
+          <description>Browser instance used for first webpage. Possible values are: firefox, chrome, iexploreproxy, safariproxy, opera. Default = firefox</description>
+        </parameter>
+        <parameter name="param_browser2" required="false">
+          <description>Browser instance used for second webpage. Possible values are: firefox, chrome, iexploreproxy, safariproxy, opera. Default = firefox</description>
+        </parameter>
+        <!--
+        verbose ???
+        -->
+        <parameter name="param_type" required="false">
+          <description>Analysis type, either "hybrid", or just "visual"</description>
+        </parameter>
+      </inputs>
+      <outputs>
+        <!--
+        <output name="output" required="true">
+          <description>Reference to output file</description>
+          <extension>jp2</extension>
+        </output>
+        -->
+        <stdout>
+          <description>Similarity distance is printed on standard out</description>
+        </stdout>
+      </outputs>
+    </operation>
+  </operations>
+</tool>
+
