@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <tool xmlns="http://scape-project.eu/tool" schemaVersion="1.0"
-      name="migration-qa" version="1.0.0" homepage="https://github.com/openplanets/scape-xcorrsound">
+      name="digital-preservation-qa-audio-xcorrsound" version="1.0.2" homepage="https://github.com/openplanets/scape-xcorrsound">
     <installation>
         <dependency operatingSystemName="Debian">waveform-compare</dependency>
         <license type="GPLv2">GNU Public License, Version 2.0</license>
@@ -9,9 +9,9 @@
         <property name="cost">0</property>
     </otherProperties>
     <operations>
-        <operation name="digital-preservation-qa-audio-xcorrsound-migrationqa">
+        <operation name="waveform-compare">
             <description>Compares two wave files</description>
-            <command>waveform-compare ${wave1} ${wave2}</command>
+            <command>waveform-compare ${params} ${wave1} ${wave2}</command>
             <inputs>
                 <input name="wave1" required="true">
                     <description>Reference to input file 1</description>

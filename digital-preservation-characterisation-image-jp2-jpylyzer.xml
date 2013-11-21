@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tool xmlns="http://scape-project.eu/tool" schemaVersion="1.0"
+      name="digital-preservation-characterisation-image-jp2-jpylyzer" version="1.0.0" homepage="https://github.com/openplanets/jpylyzer">
+    <installation>
+        <dependency operatingSystemName="Debian">jpylyzer</dependency>
+        <license type="LGPLv3">GNU Lesser GPL version 3</license>
+    </installation>
+    <otherProperties>
+        <property name="cost">0</property>
+    </otherProperties>
+    <operations>
+        <operation name="jpylyzer">
+            <description>Extract the technical characteristics of the input JP2 images</description>
+            <command>jpylyzer ${params} ${jp2s}</command>
+            <inputs>
+                <input name="jp2s" required="true">
+                    <description>Reference to jp2 input files</description>
+                </input>
+                <parameter name="params" required="false">
+                    <description>Optional parameters</description>
+                </parameter>
+            </inputs>
+            <outputs>
+                <stdout>
+                    <description>Output is directed to standard out.</description>
+                </stdout>
+            </outputs>
+        </operation>
+    </operations>
+</tool>
+
