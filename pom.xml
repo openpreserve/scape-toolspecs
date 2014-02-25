@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>eu.scape-project</groupId>
+        <artifactId>scape-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>scape-toolspecs</artifactId>
+    <name>SCAPE project's tool specifications</name>
+    <description>A home, and version control, for the SCAPE project's tool specifications for the tool-wrapper.</description>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>xjc</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <schemaDirectory>${basedir}</schemaDirectory>
+                    <packageName>eu.scape_project.pt.tool</packageName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- for snapshot builds when building with travis -->
+    <profiles>
+        <profile>
+            <id>travisbuild</id>
+            <activation>
+                <!-- active by default so we can get scape parent pom -->
+                <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>env.TRAVIS</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>sonatypesnapshots</id>
+                    <url>http://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <layout>default</layout>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+        <!-- For Maven site publication on OPF Jenkins server -->
+        <profile>
+            <id>opf-jenkins-site</id>
+            <distributionManagement>
+                <site>
+                    <id>opf.jenkins.local.site</id>
+                    <name>OPF Projects Website</name>
+                    <url>file:///var/www/projects/scape/${project.name}</url>
+                </site>
+            </distributionManagement>
+        </profile>
+    </profiles>
+</project>
