@@ -8,10 +8,10 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>scape-toolspecs</artifactId>
-    <name>SCAPE project's tool specifications</name>
+    <artifactId>scape-toolspecs-${schemaName}</artifactId>
+    <name>SCAPE project's ${schemaName} specifications</name>
     <description>A home, and version control, for the SCAPE project's tool specifications for the tool-wrapper.</description>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${schemaVersion}-SNAPSHOT</version>
 
     <build>
         <plugins>
@@ -37,15 +37,51 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <schemaDirectory>${basedir}</schemaDirectory>
-                    <packageName>eu.scape_project.pt.tool</packageName>
+                    <schemaDirectory>${basedir}/schemas</schemaDirectory>
+                    <schemaFiles>${schemaName}-${schemaVersion}_draft.xsd</schemaFiles>
+                    <packageName>${packageName}</packageName>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
-    <!-- for snapshot builds when building with travis -->
     <profiles>
+        <profile>
+            <id>tool10</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <schemaName>tool</schemaName>
+                <schemaVersion>1.0</schemaVersion>
+                <packageName>eu.scape_project.pt.tool</packageName>
+            </properties>
+        </profile>
+        <profile>
+            <id>tool11</id>
+            <properties>
+                <schemaName>tool</schemaName>
+                <schemaVersion>1.1</schemaVersion>
+                <packageName>eu.scape_project.pt.tool.TODO</packageName>
+            </properties>
+        </profile>
+        <profile>
+            <id>component10</id>
+            <properties>
+                <schemaName>component</schemaName>
+                <schemaVersion>1.0</schemaVersion>
+                <packageName>eu.scape_project.pt.component</packageName>
+            </properties>
+        </profile>
+        <profile>
+            <id>component11</id>
+            <properties>
+                <schemaName>component</schemaName>
+                <schemaVersion>1.1</schemaVersion>
+                <packageName>eu.scape_project.pt.component</packageName>
+            </properties>
+        </profile>
+        <!-- for snapshot builds when building with travis -->
         <profile>
             <id>travisbuild</id>
             <activation>
