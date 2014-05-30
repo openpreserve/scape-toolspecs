@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://scape-project.eu/component" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="http://scape-project.eu/component toolwrapper-data/src/main/resources/component-1.1_draft.xsd"
+	schemaVersion="1.1">
+	<component xsi:type="MigrationAction" 
+		profile="http://purl.org/DP/components#MigrationAction"
+		profileVersion="1.0"
+		name="digital-preservation-migration-audio-ffmpeg-audio2aac"
+		author="Hélder Silva">
+		<license name="Apache-2.0" type="FLOSS"
+			uri="http://opensource.org/licenses/Apache-2.0" />
+		<migrationPath>
+			<fromMimetype>audio/ac3</fromMimetype>
+			<toMimetype>audio/aac</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>audio/mpeg</fromMimetype>
+			<toMimetype>audio/aac</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>audio/ogg</fromMimetype>
+			<toMimetype>audio/aac</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>audio/wav</fromMimetype>
+			<toMimetype>audio/aac</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>audio/x-flac</fromMimetype>
+			<toMimetype>audio/aac</toMimetype>
+		</migrationPath>
+	</component>
+</components>
