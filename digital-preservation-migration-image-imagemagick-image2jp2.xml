@@ -1,30 +1,34 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<tool xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://scape-project.eu/tool tool-1.0_draft.xsd" xmlns="http://scape-project.eu/tool" xmlns:xlink="http://www.w3.org/1999/xlink" schemaVersion="1.0" name="ImageMagick" version="1.0.2" homepage="http://www.imagemagick.org/script/convert.php">
-  <installation>
-    <dependency operatingSystemName="Debian">imagemagick</dependency>
-    <license type="Apache Licence 2.0">Apache License, Version 2.0</license>
-  </installation>
-  <otherProperties>
-    <property name="cost">0</property>
-  </otherProperties>
-  <operations>
-    <operation name="digital-preservation-migration-image-imagemagick-image2jp2">
-      <description>Converts any ImageMagick supported image format to JPEG2000</description>
-      <command>/usr/bin/convert ${input} jp2:${output}</command>
-      <inputs>
-        <input name="input" required="true">
-          <description>Reference to input file</description>
-        </input>
-        <parameter name="params" required="false">
-          <description>Additional conversion parameters</description>
-        </parameter>
-      </inputs>
-      <outputs>
-        <output name="output" required="true">
-          <description>Reference to output file</description>
-          <extension>jp2</extension>
-        </output>
-      </outputs>
-    </operation>
-  </operations>
+<?xml version="1.0" encoding="utf-8"?>
+<tool xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://scape-project.eu/tool" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://scape-project.eu/tool schemas/tool-1.1_draft.xsd" schemaVersion="1.1" name="ImageMagick" version="1.0.3" homepage="http://www.imagemagick.org/script/convert.php">
+	<license name="Apache-2.0" uri="http://opensource.org/licenses/Apache-2.0" type="FLOSS"/>
+	<installation>
+		<operatingSystem operatingSystemName="Debian">
+			<packageManager type="Dpkg">
+				<config>imagemagick</config>
+			</packageManager>
+			<dependency name="imagemagick">
+				<license name="Apache-2.0" uri="http://opensource.org/licenses/Apache-2.0" type="FLOSS"/>
+			</dependency>
+		</operatingSystem>
+	</installation>
+	<operations>
+		<operation name="digital-preservation-migration-image-imagemagick-image2jp2">
+			<description>Converts any ImageMagick supported image format to JPEG2000</description>
+			<command>/usr/bin/convert ${input} jp2:${output}</command>
+			<inputs>
+				<input name="input" required="true">
+					<description>Reference to input file</description>
+				</input>
+				<parameter name="params" required="false">
+					<description>Additional conversion parameters</description>
+				</parameter>
+			</inputs>
+			<outputs>
+				<output name="output" required="true">
+					<description>Reference to output file</description>
+					<extension>jp2</extension>
+				</output>
+			</outputs>
+		</operation>
+	</operations>
 </tool>

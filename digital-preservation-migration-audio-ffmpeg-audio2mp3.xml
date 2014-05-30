@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <tool xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://scape-project.eu/tool schemas/tool-1.1_draft.xsd"
- xmlns="http://scape-project.eu/tool" xmlns:xlink="http://www.w3.org/1999/xlink" schemaVersion="1.0"
- name="FFmpeg" version="1.0.1" homepage="http://ffmpeg.org/">
+ xmlns="http://scape-project.eu/tool" xmlns:xlink="http://www.w3.org/1999/xlink" schemaVersion="1.1"
+ name="FFmpeg" version="1.0.2" homepage="http://ffmpeg.org/">
   <license name="LGPL-2.1" uri="http://opensource.org/licenses/LGPL-2.1" type="FLOSS" />
   <installation>
     <operatingSystem operatingSystemName="Debian">

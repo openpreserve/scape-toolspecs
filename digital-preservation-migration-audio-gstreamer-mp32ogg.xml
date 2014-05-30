@@ -1,27 +1,43 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<tool xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://scape-project.eu/tool tool-1.0_draft.xsd" xmlns="http://scape-project.eu/tool" xmlns:xlink="http://www.w3.org/1999/xlink" schemaVersion="1.0" name="GStreamer" version="1.0.1" homepage="http://gstreamer.freedesktop.org/">
-  <installation>
-    <dependency operatingSystemName="Debian">gstreamer-tools,gstreamer0.10-plugins-good,gstreamer0.10-ffmpeg,gstreamer0.10-plugins-ugly,gstreamer0.10-plugins-bad</dependency>
-    <license type="Apache Licence 2.0">Apache License, Version 2.0</license>
-  </installation>
-  <otherProperties>
-    <property name="cost">0</property>
-  </otherProperties>
-  <operations>
-    <operation name="digital-preservation-migration-audio-gstreamer-mp32ogg">
-      <description>Converts an audio file in MP3 to Ogg using GStreamer</description>
-      <command>gst-launch-0.10 filesrc location=${input} ! mad ! audioconvert ! vorbisenc ! filesink location=${output}</command>
-      <inputs>
-        <input name="input" required="true">
-          <description>Reference to input file</description>
-        </input>
-      </inputs>
-      <outputs>
-        <output name="output" required="true">
-          <description>Reference to output file</description>
-          <extension>ogg</extension>
-        </output>
-      </outputs>
-    </operation>
-  </operations>
+<?xml version="1.0" encoding="utf-8"?>
+<tool xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://scape-project.eu/tool" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://scape-project.eu/tool schemas/tool-1.1_draft.xsd" schemaVersion="1.1" name="GStreamer" version="1.0.2" homepage="http://gstreamer.freedesktop.org/">
+	<license name="Apache-2.0" type="FLOSS"/>
+	<installation>
+		<operatingSystem operatingSystemName="Debian">
+			<packageManager type="Dpkg">
+				<config>gstreamer-tools,gstreamer0.10-plugins-good,gstreamer0.10-ffmpeg,gstreamer0.10-plugins-ugly,gstreamer0.10-plugins-bad</config>
+			</packageManager>
+			<dependency name="gstreamer-tools">
+				<license name="LGPL-2.1" uri="http://opensource.org/licenses/LGPL-2.1" type="FLOSS"/>
+			</dependency>
+			<dependency name="gstreamer0.10-plugins-good">
+				<license name="LGPL-2.1" uri="http://opensource.org/licenses/LGPL-2.1" type="FLOSS"/>
+			</dependency>
+			<dependency name="gstreamer0.10-ffmpeg">
+				<license name="LGPL-2.1" uri="http://opensource.org/licenses/LGPL-2.1" type="FLOSS"/>
+			</dependency>
+			<dependency name="gstreamer0.10-plugins-ugly">
+				<license name="LGPL-2.1" uri="http://opensource.org/licenses/LGPL-2.1" type="FLOSS"/>
+			</dependency>
+			<dependency name="gstreamer0.10-plugins-bad">
+				<license name="LGPL-2.1" uri="http://opensource.org/licenses/LGPL-2.1" type="FLOSS"/>
+			</dependency>
+		</operatingSystem>
+	</installation>
+	<operations>
+		<operation name="digital-preservation-migration-audio-gstreamer-mp32ogg">
+			<description>Converts an audio file in MP3 to Ogg using GStreamer</description>
+			<command>gst-launch-0.10 filesrc location=${input} ! mad ! audioconvert ! vorbisenc ! filesink location=${output}</command>
+			<inputs>
+				<input name="input" required="true">
+					<description>Reference to input file</description>
+				</input>
+			</inputs>
+			<outputs>
+				<output name="output" required="true">
+					<description>Reference to output file</description>
+					<extension>ogg</extension>
+				</output>
+			</outputs>
+		</operation>
+	</operations>
 </tool>
