@@ -12,7 +12,27 @@
 			uri="http://opensource.org/licenses/Apache-2.0" />
 		<migrationPath>
 			<fromMimetype></fromMimetype>
-			<toMimetype></toMimetype>
+			<toMimetype>video/mp4</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype></fromMimetype>
+			<toMimetype>video/mp4</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype></fromMimetype>
+			<toMimetype>video/mp4</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype></fromMimetype>
+			<toMimetype>video/mp4</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype></fromMimetype>
+			<toMimetype>video/mp4</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype></fromMimetype>
+			<toMimetype>video/mp4</toMimetype>
 		</migrationPath>
 	</component>
 </components>

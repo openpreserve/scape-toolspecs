@@ -11,8 +11,20 @@
 		<license name="Apache-2.0" type="FLOSS"
 			uri="http://opensource.org/licenses/Apache-2.0" />
 		<migrationPath>
-			<fromMimetype></fromMimetype>
-			<toMimetype></toMimetype>
+			<fromMimetype>image/jpeg</fromMimetype>
+			<toMimetype>image/bmp</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>image/png</fromMimetype>
+			<toMimetype>image/bmp</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>image/vnd.wap.wbmp</fromMimetype>
+			<toMimetype>image/bmp</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>image/gif</fromMimetype>
+			<toMimetype>image/bmp</toMimetype>
 		</migrationPath>
 	</component>
 </components>

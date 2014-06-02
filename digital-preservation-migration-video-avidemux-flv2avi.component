@@ -11,8 +11,28 @@
 		<license name="Apache-2.0" type="FLOSS"
 			uri="http://opensource.org/licenses/Apache-2.0" />
 		<migrationPath>
-			<fromMimetype></fromMimetype>
-			<toMimetype></toMimetype>
+			<fromMimetype>video/x-flv</fromMimetype>
+			<toMimetype>video/avi</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>video/mp4</fromMimetype>
+			<toMimetype>video/avi</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>video/x-flv</fromMimetype>
+			<toMimetype>video/msvideo</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>video/mp4</fromMimetype>
+			<toMimetype>video/msvideo</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>video/x-flv</fromMimetype>
+			<toMimetype>video/x-msvideo</toMimetype>
+		</migrationPath>
+		<migrationPath>
+			<fromMimetype>video/mp4</fromMimetype>
+			<toMimetype>video/x-msvideo</toMimetype>
 		</migrationPath>
 	</component>
 </components>

@@ -11,8 +11,8 @@
 		<license name="Apache-2.0" type="FLOSS"
 			uri="http://opensource.org/licenses/Apache-2.0" />
 		<migrationPath>
-			<fromMimetype></fromMimetype>
-			<toMimetype></toMimetype>
+			<fromMimetype>video/x-ms-wmv</fromMimetype>
+			<toMimetype>video/mpeg</toMimetype>
 		</migrationPath>
 	</component>
 </components>

@@ -11,8 +11,8 @@
 		<license name="Apache-2.0" type="FLOSS"
 			uri="http://opensource.org/licenses/Apache-2.0" />
 		<migrationPath>
-			<fromMimetype></fromMimetype>
-			<toMimetype></toMimetype>
+			<fromMimetype>application/vnd.ms-excel</fromMimetype>
+			<toMimetype>application/vnd.oasis.opendocument.spreadsheet</toMimetype>
 		</migrationPath>
 	</component>
 </components>
