@@ -7,7 +7,7 @@
 				<config>openjpeg-tools</config>
 			</packageManager>
 			<dependency name="openjpeg-tools">
-				<license name="Other" uri="http://www.openjpeg.org/BSDlicense.txt" type="OTHER"/>
+				<license name="Other" uri="http://www.openjpeg.org/BSDlicense.txt" type="Other"/>
 			</dependency>
 		</operatingSystem>
 	</installation>

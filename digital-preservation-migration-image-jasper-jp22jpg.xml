@@ -7,7 +7,7 @@
 				<config>libjasper-runtime</config>
 			</packageManager>
 			<dependency name="libjasper-runtime">
-				<license name="Other" uri="http://www.ece.uvic.ca/~frodo/jasper/LICENSE" type="OTHER"/>
+				<license name="Other" uri="http://www.ece.uvic.ca/~frodo/jasper/LICENSE" type="Other"/>
 			</dependency>
 		</operatingSystem>
 	</installation>
