@@ -5,7 +5,7 @@
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
 				<config>pdfbox-app-cli</config>
-				<source>FIXME</source>
+				<source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
 			<dependency name="pdfbox-app-cli">
 				<license name="Apache-2.0" uri="http://opensource.org/licenses/Apache-2.0" type="FLOSS"/>

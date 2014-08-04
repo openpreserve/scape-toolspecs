@@ -5,6 +5,7 @@
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
 				<config>gimp</config>
+            <source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
 			<dependency name="gimp">
 				<license name="GPL-3.0" uri="http://opensource.org/licenses/GPL-3.0" type="FLOSS"/>

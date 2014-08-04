@@ -4,7 +4,8 @@
 	<installation>
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
-				<config>deb-multimedia-keyring,handbrake-cli</config>
+				<config>handbrake-cli</config>
+            <source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
 			<dependency name="handbrake-cli">
 				<license name="LGPL-3.0" uri="http://opensource.org/licenses/LGPL-3.0" type="FLOSS"/>

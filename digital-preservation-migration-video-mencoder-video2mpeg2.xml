@@ -5,6 +5,7 @@
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
 				<config>mencoder</config>
+            <source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
 			<dependency name="mencoder">
 				<license name="GPL-2.0" uri="opensource.org/licenses/GPL-2.0" type="FLOSS"/>

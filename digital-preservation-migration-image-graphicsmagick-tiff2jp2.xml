@@ -5,6 +5,7 @@
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
 				<config>graphicsmagick</config>
+            <source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
 			<dependency name="graphicsmagick">
 				<license name="MIT" uri="http://opensource.org/licenses/MIT" type="FLOSS"/>

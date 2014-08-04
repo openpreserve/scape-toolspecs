@@ -5,6 +5,7 @@
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
 				<config>sox,libsox-fmt-mp3</config>
+            <source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
 			<dependency name="sox">
 				<license name="LGPL-2.1" uri="http://opensource.org/licenses/LGPL-2.1" type="FLOSS"/>

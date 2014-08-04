@@ -5,6 +5,7 @@
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
 				<config>gstreamer-tools,gstreamer0.10-plugins-good,gstreamer0.10-ffmpeg,gstreamer0.10-plugins-ugly,gstreamer0.10-plugins-bad</config>
+            <source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
 			<dependency name="gstreamer-tools">
 				<license name="LGPL-2.1" uri="http://opensource.org/licenses/LGPL-2.1" type="FLOSS"/>

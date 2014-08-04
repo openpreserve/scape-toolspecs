@@ -5,6 +5,7 @@
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
 				<config>mpg321</config>
+            <source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
 			<dependency name="mpg321">
 				<license name="GPL-2.0" uri="http://opensource.org/licenses/GPL-2.0" type="FLOSS"/>

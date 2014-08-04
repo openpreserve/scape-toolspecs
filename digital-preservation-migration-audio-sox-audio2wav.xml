@@ -5,6 +5,7 @@
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
 				<config>sox</config>
+            <source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
 			<dependency name="sox">
 				<license name="Apache-2.0" uri="http://opensource.org/licenses/Apache-2.0" type="FLOSS"/>

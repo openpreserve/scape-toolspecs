@@ -5,7 +5,7 @@
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
 				<config>jodconverter,openoffice-server-headless-lsb-initscript</config>
-				<source>FIXME</source>
+				<source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
 			<dependency name="jodconverter">
 				<license name="LGPL-3.0" uri="http://opensource.org/licenses/LGPL-3.0" type="FLOSS"/>
