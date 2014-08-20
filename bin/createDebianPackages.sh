@@ -4,6 +4,9 @@ cd $(dirname $0)
 
 
 if [ $# -eq 0 ]; then
+	echo "Script that eases the generation of Debian packages for the toolspecs/components available in this GitHub repository"
+	echo "(https://github.com/openplanets/scape-toolspecs)"
+	echo
 	echo "USAGE: $0 TOOLWRAPPER_BASE_DIR MAINTAINER_E-MAIL [TOOLSPECS_PATTERN]"
 	echo
 	echo "Example 1: Generate Debian packages for all toolspecs"
@@ -13,7 +16,7 @@ if [ $# -eq 0 ]; then
 	exit 1
 fi
 
-TOOLSPECS_PATTERN="../digital-preservation-migration*.xml"
+TOOLSPECS_PATTERN="digital-preservation-migration*.xml"
 EMAIL="xpto@domain.com"
 TOOLWRAPPER_BASE_DIR="/home/hsilva/Git/scape-toolwrapper"
 if [ $# -ge 2 ]; then

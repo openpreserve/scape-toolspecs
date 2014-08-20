@@ -3,6 +3,9 @@
 cd $(dirname $0)
 
 if [ $# -eq 0 ]; then
+	echo "Script that eases the upload of SCAPE Components generated from the toolspecs/components available in this GitHub repository"
+	echo "(https://github.com/openplanets/scape-toolspecs)"
+	echo
 	echo "USAGE: $0 TOOLWRAPPER_BASE_DIR MYEXPERIMENT_USERNAME MYEXPERIMENT_PASSWORD [TOOLSPECS_PATTERN]"
 	echo
 	echo "Example 1: Uploading components for all toolspecs"
@@ -67,6 +70,7 @@ do
 
 		# upload component (-e 490 to share with SCAPE group, -e public for public view/download) 
 		$TOOLWRAPPER_BASE_DIR/toolwrapper-component-uploader/bin/upload.sh -c "$temp_dir/workflow/$operation_name.t2flow" -d "$description" -i "$family" -l Apache -p "$PASSWORD" -s "$temp_dir/install/$operation_name.component" -t "$temp_dir/install/$operation_name.xml" -u "$USERNAME" -e 490 &>>$LOGFILE
+		#$TOOLWRAPPER_BASE_DIR/toolwrapper-component-uploader/bin/upload.sh -c "$temp_dir/workflow/$operation_name.t2flow" -d "$description" -i "$family" -l Apache -p "$PASSWORD" -s "$temp_dir/install/$operation_name.component" -t "$temp_dir/install/$operation_name.xml" -u "$USERNAME" -e public &>>$LOGFILE
 
 		rm -rf $temp_dir
 	else
