@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<tool xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://scape-project.eu/tool" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://scape-project.eu/tool schemas/tool-1.1_draft.xsd" schemaVersion="1.1" name="ImageMagick" version="1.1.0" homepage="http://www.imagemagick.org/script/convert.php">
+<tool xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://scape-project.eu/tool" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://scape-project.eu/tool schemas/tool-1.1_draft.xsd" schemaVersion="1.1" name="GraphicsMagick" version="1.0.0" homepage="http://www.graphicsmagick.org/">
 	<license name="Apache-2.0" uri="http://opensource.org/licenses/Apache-2.0" type="FLOSS"/>
 	<installation>
 		<operatingSystem operatingSystemName="Debian">
 			<packageManager type="Dpkg">
-				<config>imagemagick</config>
+				<config>graphicsmagick</config>
+            <source>deb http://ubapt.opf-labs.org precise main</source>
 			</packageManager>
-			<dependency name="imagemagick">
-				<license name="Apache-2.0" uri="http://opensource.org/licenses/Apache-2.0" type="FLOSS"/>
+			<dependency name="graphicsmagick">
+				<license name="MIT" uri="http://opensource.org/licenses/MIT" type="FLOSS"/>
 			</dependency>
 		</operatingSystem>
 	</installation>
 	<operations>
-		<operation name="digital-preservation-migration-image-imagemagick-image2tiff">
-			<description>Converts any ImageMagick supported image format to TIFF</description>
-			<command>/usr/bin/convert ${compression} ${input} tiff:${output}</command>
+		<operation name="digital-preservation-migration-image-graphicsmagick-image2tiff">
+			<description>Converts any GraphicsMagick supported image format to TIFF</description>
+			<command>gm convert ${compression} ${input} ${output}</command>
 			<inputs>
 				<input name="input" required="true">
 					<description>Reference to input file</description>
